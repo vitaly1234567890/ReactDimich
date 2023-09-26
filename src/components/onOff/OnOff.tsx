@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 
-type OnOffPropsType = {
-    // action: boolean
-}
 
 
-export const OnOff = (props: OnOffPropsType) => {
+
+export const OnOff = () => {
 
     let [on, setOn]=useState(false)
 

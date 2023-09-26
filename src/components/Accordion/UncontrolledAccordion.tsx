@@ -4,7 +4,7 @@ import React, {useState} from "react";
 
 type AccordionPropstype = {
     title1: string
-    // collapsed: boolean
+
 }
 export function UncontrolledAccordion(props: AccordionPropstype) {
 
