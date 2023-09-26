@@ -2,11 +2,20 @@ import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
-import OnOff from "./components/onOff/OnOff";
+import {OnOff} from "./components/onOff/OnOff";
+import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 
 function App() {
   return (
-    <div>
+    <div className={'App'}>
+        <OnOff />
+        <OnOff />
+        <UncontrolledAccordion title1={'Menu'}/>
+        <UncontrolledAccordion title1={'Users'}/>
+        <UncontrolledRating />
+        <UncontrolledRating />
+
         {/*<PageTitle title={"This is APP component"}/>*/}
         {/*<Accordion title1={'Menu'} collapsed={true}/>*/}
         {/*<Accordion title1={'Users'} collapsed={false}/>*/}
@@ -17,7 +26,6 @@ function App() {
         {/*<Rating value={3}/>*/}
         {/*<Rating value={4}/>*/}
         {/*<Rating value={5}/>*/}
-        <OnOff action={true}/>
     </div>
   );
 }

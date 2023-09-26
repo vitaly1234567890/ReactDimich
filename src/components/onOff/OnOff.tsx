@@ -1,40 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 type OnOffPropsType = {
-    action: boolean
+    // action: boolean
 }
 
 
+export const OnOff = (props: OnOffPropsType) => {
 
-const OnOff = (props: OnOffPropsType) => {
+    let [on, setOn]=useState(false)
+
+
+
+    const onStyle = {
+        height: '20px',
+        width: '30px',
+        border: '1px solid black',
+        marginLeft: '2px',
+        display: 'inline-block',
+        backgroundColor: on ? 'green' : 'white',
+    }
+    const offStyle = {
+        height: '20px',
+        width: '30px',
+        border: '1px solid black',
+        marginLeft: '2px',
+        display: 'inline-block',
+        backgroundColor: on ? 'white' : 'red'
+    }
+    const indicator = {
+        height: '10px',
+        width: '10px',
+        borderRadius: '5px',
+        border: '1px solid black',
+        marginLeft: '5px',
+        display: 'inline-block',
+        backgroundColor: on ? 'green' : 'red'
+    }
 
     return (
-        <div>
-            { props.action && <Buttons />}
-            { !props.action && <Buttons2 />}
+        <div className={'ButtonStyle'}>
+            <div style={onStyle} onClick={ ()=>{setOn(true)}}>On</div>
+            <div style={offStyle} onClick={ ()=>{setOn(false)}}>Off</div>
+            <div style={indicator}></div>
         </div>
+
     );
 };
 
-
-function Buttons() {
-    return (
-        <div className={"ButtonStyle"}>
-            <button className={"on"}>On</button>
-            <button >Off</button>
-            <button className={'round1'}></button>
-        </div>
-    )
-}
-
-function Buttons2() {
-    return (
-        <div className={"ButtonStyle"}>
-            <button>On</button>
-            <button className={"off"}>Off</button>
-            <button className={'round2'}></button>
-        </div>
-    )
-}
-
-export default OnOff;
