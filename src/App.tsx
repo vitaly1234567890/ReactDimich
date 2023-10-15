@@ -17,7 +17,7 @@ function App() {
   return (
     <div className={'App'}>
         <PageTitle title={"Hello"}/>
-        <OnOff on={switchOn} onChange={setSwitchOn}/>
+        {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
         <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
         <Accordion title1={'User'} collapsed={accordionValue} onChange = {()=> setAccordionValue(!accordionValue)}/>
         <UncontrolledAccordion title1={'Menu'}/>
