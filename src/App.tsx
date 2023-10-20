@@ -19,10 +19,10 @@ function App() {
         <PageTitle title={"Hello"}/>
         {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
         <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
-        <Accordion title1={'User'} collapsed={accordionValue} onChange = {()=> setAccordionValue(!accordionValue)}/>
+        {/*<Accordion  title1={'User'} collapsed={accordionValue} onChange = {()=> setAccordionValue(!accordionValue)} />*/}
         <UncontrolledAccordion title1={'Menu'}/>
         {/*<UncontrolledRating />*/}
-        {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
+        <Rating value={ratingValue} onClick={setRatingValue}/>
     </div>
   );
 }
